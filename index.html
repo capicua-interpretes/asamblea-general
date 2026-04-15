@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Asamblea General</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;500;700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
+</head>
+<body>
+  <header>
+  </header>
+  <main class="contenido">
+    <section class="form-wrapper">
+      <div class="form-header">
+        <div class="form-logo">
+          <img src="images/solido.svg" alt="Logo" />
+          <span class="nav-title">
+            <span class="nav-title-bold">CAPICUA</span><br />
+            <span class="nav-title-small">intérpretes</span>
+          </span>
+        </div>
+          
+      </div>
+
+      <div class="stepper">
+        <div class="stepper-item active">
+          <div class="circle"></div>
+          <label>Participación en la Asamblea General</label>
+        </div>
+
+        <div class="stepper-item">
+          <div class="circle"></div>
+          <label>Colaboración con CAPICUA</label>
+        </div>
+
+        <div class="stepper-item">
+          <div class="circle"></div>
+          <label>Ruegos y preguntas</label>
+        </div>
+      </div>
+
+      <div class="form-container">      
+
+        <div class="form">
+          <form id="multiStepForm" action="https://formspree.io/f/maqawrdk" method="POST">
+              
+
+            <div class="steps-wrapper">
+
+              <!-- PASO 1 -->
+              <fieldset class="step">
+
+                <div class="step-content">
+                  <label class="question">Datos personales</label>
+                  <div class="answer">
+                    <input type="text" name="Nombre" placeholder="Nombre y apellidos" required>
+                    <input type="email" name="Correo electrónico" placeholder="Correo electrónico" required>
+                  </div>
+
+                  <label class="question">¿Vas a acudir a la Asamblea General?</label>
+                  <div class="answer">
+                    <div class="checkbox">
+                      <input type="radio" name="Asistencia" value="Presencial" required>
+                      <label>Sí, presencialmente</label>
+                    </div>
+
+                    <div class="checkbox">
+                      <input type="radio" name="Asistencia" value="Virtual">
+                      <label>Sí, virtualmente</label>
+                    </div>
+
+                    <div class="checkbox">
+                      <input type="radio" name="Asistencia" value="No">
+                      <label>No</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-button">
+                  <button type="button" class="next">Siguiente</button>
+                </div>
+              </fieldset>
+
+
+              <!-- PASO 2 -->
+              <fieldset class="step">
+                <div class="step-content">
+
+                  <label class="question">¿Te gustaría participar en la Junta Directiva?</label>
+                  <p class="definition">Un puesto en la Junta Directiva es un cargo de responsabilidad para el que se requiere dedicación, al menos, semanal durante un período mínimo de un año.</p>
+                    
+                  <div class="answer">
+                    <div class="checkbox">
+                      <input type="radio" name="Junta" value="Sí">
+                      <label>Sí</label>
+                    </div>
+                    <div class="checkbox">
+                      <input type="radio" name="Junta" value="No">
+                      <label>No</label>
+                    </div>
+                  </div>
+
+                  <div class="puesto-fields conditional">
+                    <label class="question">¿En qué puesto?</label>
+                    <div class="answer">
+                      <div class="checkbox-wrapper">
+                        <div class="checkbox"><input type="checkbox" name="Puesto[]" value="Presidencia"> Presidencia</div>
+                        <div class="checkbox"><input type="checkbox" name="Puesto[]" value="Vicepresidencia"> Vicepresidencia</div>
+                        <div class="checkbox"><input type="checkbox" name="Puesto[]" value="Secretaría"> Secretaría</div>
+                        <div class="checkbox"><input type="checkbox" name="Puesto[]" value="Tesorería"> Tesorería</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <label class="question">¿Te gustaría formar parte del equipo de coordinación?</label>
+                  <p class="definition">El equipo se encarga de tareas más puntuales que dispone y coordina la Junta Directiva. No es preciso contar con un nivel de disponibilidad tan elevado y permite más flexibilidad en función de las necesidades y las circunstancias personales.</p>
+                  <div class="answer">
+                    <div class="checkbox">
+                      <input type="radio" name="Coordinación" value="Sí">
+                      <label>Sí</label>
+                    </div>
+                    <div class="checkbox">
+                      <input type="radio" name="Coordinación" value="No">
+                      <label>No</label>
+                    </div>
+                  </div>
+
+                  <div class="areas-fields conditional">
+                    <label class="question">¿En qué área de actividad?</label>
+                    <div class="answer">
+                      <div class="checkbox-wrapper">
+                        <div class="checkbox"><input type="checkbox" name="Áreas[]" value="Relaciones externas">Relaciones externas</div>
+                        <p class="definition-actividad">¿Formas parte de otra asociación y crees que les caeríamos bien? ¿Sigues en contacto con tus profesoras de la universidad? ¿Te hicieron la vida imposible y quieres restregarles tu éxito? Este es tu lugar.</p>
+                        <div class="checkbox"><input type="checkbox" name="Áreas[]" value="Comunicación">Comunicación: redes sociales</div>
+                        <p class="definition-actividad">Da rienda suelta a tu espíritu más influencer (del que nosotras carecemos por completo). Plena libertad para publicar memes e incluir emojis de patos.</p>
+                        <div class="checkbox"><input type="checkbox" name="Áreas[]" value="Apoyo operativo">Apoyo operativo: prácticas y talleres</div>
+                        <p class="definition-actividad">Si tienes unas ganas locas de interpretar justo sobre ese tema de nicho que jamás tocamos nos puedes echar una mano con un discurso de vez en cuando. Por otra parte, y con el tiempo que llevamos haciendo talleres, nos estamos empezando a quedar sin ideas y sin puertas que tocar. ¡Toda ayuda es bienvenida!</p>
+                        <div class="checkbox"><input type="checkbox" name="Áreas[]" value="Innovación"> Innovación estratégica</div>
+                        <p class="definition-actividad">Un nombre muy rimbombante para esencialmente hacer propaganda y llegar a más gente. Se admiten propuestas.</p>
+                        <div class="checkbox">
+                          <input type="checkbox" id="otra-area" name="Áreas[]" value="Otra">
+                          <label for="otra-area">Otra</label>
+                        </div>
+
+                        <input type="text" name="Áreas_Otra" class="otra-input" placeholder="Dinos cuál..." />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-button">
+                  <button type="button" class="prev">Anterior</button>
+                  <button type="button" class="next">Siguiente</button>
+                </div>
+              </fieldset>
+
+
+              <!-- PASO 3 -->
+              <fieldset class="step">
+                <div class="step-content">
+                  <label class="question">¿Algo que añadir?</label>
+                  <textarea name="Comentarios"></textarea>
+                  
+                  <div class="checkbox">
+                    <input type="checkbox" name="RGPD" required>
+                    <label>Acepto la política de protección de datos</label>
+                  </div>
+                </div>
+
+                <div class="form-button">
+                  <button type="button" class="prev">Anterior</button>
+                  <button type="submit">Enviar</button>
+                </div>
+              </fieldset>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  
+  <script>
+  const stepsWrapper = document.querySelector(".steps-wrapper");
+  const steps = document.querySelectorAll(".step");
+  const stepperItems = document.querySelectorAll(".stepper-item");
+
+  let currentStep = 0;
+
+  /* -------------------------
+    STEP + STEPPER
+  ------------------------- */
+
+  const stepper = document.querySelector(".stepper");
+  const stepperProgress = document.createElement("div");
+  stepperProgress.classList.add("stepper-progress");
+  stepper.appendChild(stepperProgress);
+
+  function updateStep() {
+  steps.forEach((step, index) => {
+    step.classList.remove("active");
+
+    if (index === currentStep) {
+      step.classList.add("active");
+    }
+  });
+
+  updateStepper();
+}
+
+  function updateStepper() {
+    stepperItems.forEach((item, index) => {
+      item.classList.remove("active", "completed");
+
+      if (index === currentStep) {
+        item.classList.add("active");
+      } else if (index < currentStep) {
+        item.classList.add("completed");
+      }
+    });
+
+
+    const totalSteps = steps.length;
+    const offset = 100 / totalSteps / 2;
+
+    const progressPercent = (currentStep / (totalSteps - 1)) * 100;
+  
+    stepperProgress.style.width = (progressPercent * (100 - offset * 2)) / 100 + "%";
+  }
+
+  /* -------------------------
+    VALIDACIÓN
+  ------------------------- */
+
+  function validateStep(step) {
+    let valid = true;
+
+    // limpiar mensajes anteriores
+    step.querySelectorAll(".error-msg").forEach(el => el.remove());
+
+    const inputs = step.querySelectorAll("input[required]");
+
+    for (let input of inputs) {
+      if (input.type === "radio") {
+        const name = input.name;
+        const group = step.querySelectorAll(`input[name="${name}"]`);
+        const checked = step.querySelector(`input[name="${name}"]:checked`);
+
+        if (!checked) {
+          valid = false;
+
+          const wrapper = group[0].closest(".answer") || group[0].parentElement;
+
+          const msg = document.createElement("div");
+          msg.className = "error-msg show";
+          msg.textContent = "Este campo es obligatorio";
+
+          wrapper.appendChild(msg);
+        }
+
+      } else {
+        if (!input.value.trim()) {
+          valid = false;
+
+          const msg = document.createElement("div");
+          msg.className = "error-msg show";
+          msg.textContent = "Este campo es obligatorio";
+
+          input.insertAdjacentElement("afterend", msg);
+        }
+      }
+    }
+
+    return valid;
+  }
+
+  /* -------------------------
+    NAVEGACIÓN
+  ------------------------- */
+
+  document.querySelectorAll(".next").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const current = steps[currentStep];
+
+      if (!validateStep(current)) {
+        showError(current);
+        return;
+      }
+
+      if (currentStep < steps.length - 1) {
+        currentStep++;
+        updateStep();
+      }
+    });
+  });
+
+  document.querySelectorAll(".prev").forEach(btn => {
+    btn.addEventListener("click", () => {
+      if (currentStep > 0) {
+        currentStep--;
+        updateStep();
+      }
+    });
+  });
+
+  /* -------------------------
+    CONDICIONALES
+  ------------------------- */
+
+  const puestoFields = document.querySelector(".puesto-fields");
+  const areasFields = document.querySelector(".areas-fields");
+
+  /* --- JUNTA DIRECTIVA --- */
+  document.querySelectorAll('input[name="Junta"]').forEach(input => {
+    input.addEventListener("change", e => {
+      const show = e.target.value === "Sí";
+
+      if (puestoFields) {
+        puestoFields.classList.toggle("show", show);
+
+        if (!show) {
+          puestoFields.querySelectorAll("input").forEach(i => i.checked = false);
+        }
+      }
+    });
+  });
+
+  /* --- COORDINACIÓN --- */
+  document.querySelectorAll('input[name="Coordinación"]').forEach(input => {
+    input.addEventListener("change", e => {
+      const show = e.target.value === "Sí";
+
+      if (areasFields) {
+        areasFields.classList.toggle("show", show);
+
+        if (!show) {
+          areasFields.querySelectorAll("input").forEach(i => i.checked = false);
+        }
+      }
+    });
+  });
+
+
+  /* -------------------------
+    INIT
+  ------------------------- */
+
+  updateStep();
+</script>
+</body>
+</html>
+
+
+
