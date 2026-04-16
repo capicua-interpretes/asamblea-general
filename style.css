@@ -4,16 +4,6 @@
   font-weight: 300;
 }
 
-h1 {
-  font-family: 'DomaineDisplayBold', serif;
-  font-size: 3em;
-  font-weight: bold;
-  padding: 0 0 0 0;
-  margin: 0;
-  position: relative;
-  text-align: left;
-}
-
 h2 {
   font-family: 'Barlow', sans-serif;
   font-size: 3em;
@@ -110,8 +100,6 @@ input[type="checkbox"]:checked::before {
 main {
   flex: 1;
 }
-
-
 
 label,
 p,
@@ -401,7 +389,7 @@ textarea {
   margin-right: 1em;
  }
 
- .form-button button {
+.form-button button {
   min-width: 120px;
 }
 
@@ -500,8 +488,10 @@ button[class="prev"]:hover {
 .error-msg {
   font-size: 0.85em;
   color: #2badba;
-  margin-top: 0.3em;
+  margin-top: -0.6em;
+  margin-bottom: 1em;
   display: none;
+  text-align: end;
 }
 
 .error-msg.show {
@@ -553,11 +543,8 @@ button[class="prev"]:hover {
   }
 
   .form-button {
-    margin-top: 2em;
-    display: flex;
     justify-content: center;
-    gap: 1em;
-    margin-right: 1em;
+    margin-right: 0px;
   }
 
   .circle {
@@ -569,9 +556,15 @@ button[class="prev"]:hover {
   .stepper-progress {
     top: 11px;
   }
+
+  button[class="prev"],
+  button[type="submit"],
+  button[class="next"] {
+    padding: 12px 20px;
+    width: stretch;
+  }
 }
 
-/* Móviles pequeños */
 @media screen and (max-width: 480px) {
   h1 {
     font-size: 1.8em;
